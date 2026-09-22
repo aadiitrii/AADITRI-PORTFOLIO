@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaditri Mishra | Portfolio & Journal</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Marked.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-blur blur-1"></div>
+  <div class="ambient-blur blur-2"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="logo">Aaditri<span class="dot">.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="hero">
+    <div class="hero-badge">✨ Tech Enthusiast & Developer</div>
+    <h1 class="hero-title">
+      Building modern systems with <span class="gradient-text">data & design</span>
+    </h1>
+    <p class="hero-subtitle">
+      Hi, I'm <strong>Aaditri Mishra</strong>. I specialize in data management, Python development, and prompt engineering while crafting sleek digital experiences.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Explore Work</a>
+      <a href="#blog" class="btn btn-secondary">Read Journal</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><span class="icon">🐍</span> Python</div>
+      <div class="skill-card"><span class="icon">🗄️</span> SQL</div>
+      <div class="skill-card"><span class="icon">🌐</span> HTML</div>
+      <div class="skill-card"><span class="icon">💾</span> Database Management</div>
+      <div class="skill-card"><span class="icon">⚙️</span> Basics of C & C++</div>
+      <div class="skill-card"><span class="icon">🤖</span> Prompt Engineering</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>InfoSphere</h3>
+        <p>A comprehensive information hub designed for efficient data query handling and structured dynamic display.</p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Database Mgmt</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Sho-Pro</h3>
+        <p>A streamlined project management showcase tool built to organize workflows and optimize resource allocation.</p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>Database Mgmt</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Smart Query Engine</h3>
+        <p>A lightweight utility designed to structure complex relational database queries and generate clean reports.</p>
+        <div class="tech-stack">
+          <span>SQL</span>
+          <span>Python</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>CLI Utility Toolkit</h3>
+        <p>A set of low-level C and C++ command-line tools for file manipulation and algorithmic data processing.</p>
+        <div class="tech-stack">
+          <span>C</span>
+          <span>C++</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <h2 class="section-title">Markdown Journal</h2>
+    
+    <!-- Blog Post Grid -->
+    <div id="blog-list" class="blog-grid">
+      <div class="blog-card" onclick="loadPost('posts/hello-world.md')">
+        <div class="post-meta">
+          <span class="tag">Reflections</span>
+          <span class="date">Sept 20, 2026</span>
+        </div>
+        <h3>Hello World! Welcome to My Digital Garden</h3>
+        <p>An introduction to my personal space, my engineering philosophies, and what I plan to build...</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+
+      <div class="blog-card" onclick="loadPost('posts/learning-js.md')">
+        <div class="post-meta">
+          <span class="tag">AI & Engineering</span>
+          <span class="date">Sept 22, 2026</span>
+        </div>
+        <h3>The Art of Prompt Engineering & Data Modeling</h3>
+        <p>Exploring how structured querying and precision prompting are reshaping software architectures...</p>
+        <span class="read-more">Read Article →</span>
+      </div>
+    </div>
+
+    <!-- Reader Container -->
+    <div id="blog-reader" class="blog-reader hidden">
+      <button onclick="closePost()" class="btn-back">← Back to posts</button>
+      <article id="post-content" class="post-content"></article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <span class="highlight">Aaditri Mishra</span>. Built with passion & modern tools.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
